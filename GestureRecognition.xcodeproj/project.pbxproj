@@ -15,6 +15,8 @@
 		1849EB0323C7FA360011DE1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1849EB0123C7FA360011DE1E /* LaunchScreen.storyboard */; };
 		1849EB0E23C7FA360011DE1E /* GestureRecognitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849EB0D23C7FA360011DE1E /* GestureRecognitionTests.swift */; };
 		1849EB1923C7FA360011DE1E /* GestureRecognitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849EB1823C7FA360011DE1E /* GestureRecognitionUITests.swift */; };
+		1849EB2D23C83B170011DE1E /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1849EB2C23C83B170011DE1E /* KeyboardViewController.swift */; };
+		1849EB3123C83B170011DE1E /* Gesture Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1849EB2A23C83B170011DE1E /* Gesture Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,28 @@
 			remoteGlobalIDString = 1849EAF223C7FA340011DE1E;
 			remoteInfo = GestureRecognition;
 		};
+		1849EB2F23C83B170011DE1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1849EAEB23C7FA340011DE1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1849EB2923C83B170011DE1E;
+			remoteInfo = "Gesture Keyboard";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1849EB3523C83B170011DE1E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1849EB3123C83B170011DE1E /* Gesture Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1849EAF323C7FA340011DE1E /* GestureRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +72,9 @@
 		1849EB1423C7FA360011DE1E /* GestureRecognitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureRecognitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1849EB1823C7FA360011DE1E /* GestureRecognitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognitionUITests.swift; sourceTree = "<group>"; };
 		1849EB1A23C7FA360011DE1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1849EB2A23C83B170011DE1E /* Gesture Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gesture Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1849EB2C23C83B170011DE1E /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		1849EB2E23C83B170011DE1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1849EB2723C83B170011DE1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +115,7 @@
 				1849EAF523C7FA340011DE1E /* GestureRecognition */,
 				1849EB0C23C7FA360011DE1E /* GestureRecognitionTests */,
 				1849EB1723C7FA360011DE1E /* GestureRecognitionUITests */,
+				1849EB2B23C83B170011DE1E /* Gesture Keyboard */,
 				1849EAF423C7FA340011DE1E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +126,7 @@
 				1849EAF323C7FA340011DE1E /* GestureRecognition.app */,
 				1849EB0923C7FA360011DE1E /* GestureRecognitionTests.xctest */,
 				1849EB1423C7FA360011DE1E /* GestureRecognitionUITests.xctest */,
+				1849EB2A23C83B170011DE1E /* Gesture Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +171,15 @@
 			path = GestureRecognitionUITests;
 			sourceTree = "<group>";
 		};
+		1849EB2B23C83B170011DE1E /* Gesture Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1849EB2C23C83B170011DE1E /* KeyboardViewController.swift */,
+				1849EB2E23C83B170011DE1E /* Info.plist */,
+			);
+			path = "Gesture Keyboard";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,10 +190,12 @@
 				1849EAEF23C7FA340011DE1E /* Sources */,
 				1849EAF023C7FA340011DE1E /* Frameworks */,
 				1849EAF123C7FA340011DE1E /* Resources */,
+				1849EB3523C83B170011DE1E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1849EB3023C83B170011DE1E /* PBXTargetDependency */,
 			);
 			name = GestureRecognition;
 			productName = GestureRecognition;
@@ -192,6 +238,23 @@
 			productReference = 1849EB1423C7FA360011DE1E /* GestureRecognitionUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		1849EB2923C83B170011DE1E /* Gesture Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1849EB3223C83B170011DE1E /* Build configuration list for PBXNativeTarget "Gesture Keyboard" */;
+			buildPhases = (
+				1849EB2623C83B170011DE1E /* Sources */,
+				1849EB2723C83B170011DE1E /* Frameworks */,
+				1849EB2823C83B170011DE1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gesture Keyboard";
+			productName = "Gesture Keyboard";
+			productReference = 1849EB2A23C83B170011DE1E /* Gesture Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,6 +276,9 @@
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = 1849EAF223C7FA340011DE1E;
 					};
+					1849EB2923C83B170011DE1E = {
+						CreatedOnToolsVersion = 11.3;
+					};
 				};
 			};
 			buildConfigurationList = 1849EAEE23C7FA340011DE1E /* Build configuration list for PBXProject "GestureRecognition" */;
@@ -231,6 +297,7 @@
 				1849EAF223C7FA340011DE1E /* GestureRecognition */,
 				1849EB0823C7FA360011DE1E /* GestureRecognitionTests */,
 				1849EB1323C7FA360011DE1E /* GestureRecognitionUITests */,
+				1849EB2923C83B170011DE1E /* Gesture Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -254,6 +321,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1849EB1223C7FA360011DE1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1849EB2823C83B170011DE1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -289,6 +363,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1849EB2623C83B170011DE1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1849EB2D23C83B170011DE1E /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -301,6 +383,11 @@
 			isa = PBXTargetDependency;
 			target = 1849EAF223C7FA340011DE1E /* GestureRecognition */;
 			targetProxy = 1849EB1523C7FA360011DE1E /* PBXContainerItemProxy */;
+		};
+		1849EB3023C83B170011DE1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1849EB2923C83B170011DE1E /* Gesture Keyboard */;
+			targetProxy = 1849EB2F23C83B170011DE1E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -433,6 +520,7 @@
 		1849EB1E23C7FA360011DE1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GestureRecognition/Preview Content\"";
@@ -452,6 +540,7 @@
 		1849EB1F23C7FA360011DE1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GestureRecognition/Preview Content\"";
@@ -548,6 +637,42 @@
 			};
 			name = Release;
 		};
+		1849EB3323C83B170011DE1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Gesture Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.horine.GestureRecognition.Gesture-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1849EB3423C83B170011DE1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Gesture Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.horine.GestureRecognition.Gesture-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,6 +708,15 @@
 			buildConfigurations = (
 				1849EB2423C7FA360011DE1E /* Debug */,
 				1849EB2523C7FA360011DE1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1849EB3223C83B170011DE1E /* Build configuration list for PBXNativeTarget "Gesture Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1849EB3323C83B170011DE1E /* Debug */,
+				1849EB3423C83B170011DE1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
