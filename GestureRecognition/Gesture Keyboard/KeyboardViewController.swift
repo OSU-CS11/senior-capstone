@@ -2,8 +2,8 @@
 //  KeyboardViewController.swift
 //  Gesture Keyboard
 //
-//  Created by Horine, Zachary Bryce on 1/9/20.
-//  Copyright © 2020 Zachary Horine. All rights reserved.
+//  Created by Kramer, Jeremiah William on 1/17/20.
+//  Copyright © 2020 OSU-CS11. All rights reserved.
 //
 
 import UIKit
