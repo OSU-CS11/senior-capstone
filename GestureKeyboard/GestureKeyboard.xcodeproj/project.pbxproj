@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59E9BEAC23FA381400F58819 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E9BEA823FA380800F58819 /* SnapKit.framework */; };
+		59E9BEAD23FA381400F58819 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 59E9BEA823FA380800F58819 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		59E9BEAE23FA381800F58819 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E9BEA823FA380800F58819 /* SnapKit.framework */; };
+		59E9BEAF23FA381800F58819 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 59E9BEA823FA380800F58819 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED5EF48123F78AEF00A39490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EF48023F78AEF00A39490 /* AppDelegate.swift */; };
+		ED5EF48323F78AEF00A39490 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EF48223F78AEF00A39490 /* SceneDelegate.swift */; };
+		ED5EF48523F78AEF00A39490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EF48423F78AEF00A39490 /* ViewController.swift */; };
+		ED5EF48823F78AEF00A39490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5EF48623F78AEF00A39490 /* Main.storyboard */; };
+		ED5EF48A23F78AF000A39490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED5EF48923F78AF000A39490 /* Assets.xcassets */; };
+		ED5EF48D23F78AF000A39490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED5EF48B23F78AF000A39490 /* LaunchScreen.storyboard */; };
+		ED5EF49B23F78B1A00A39490 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5EF49A23F78B1A00A39490 /* KeyboardViewController.swift */; };
+		ED5EF49F23F78B1A00A39490 /* GestureCustomKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ED5EF49823F78B1A00A39490 /* GestureCustomKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED5EF4C923F78D4200A39490 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = ED5EF4C423F78D4200A39490 /* globe.png */; };
+		ED5EF4CA23F78D4200A39490 /* cap.png in Resources */ = {isa = PBXBuildFile; fileRef = ED5EF4C523F78D4200A39490 /* cap.png */; };
+		ED5EF4CB23F78D4200A39490 /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = ED5EF4C623F78D4200A39490 /* delete.png */; };
+		ED5EF4CC23F78D4200A39490 /* space.png in Resources */ = {isa = PBXBuildFile; fileRef = ED5EF4C723F78D4200A39490 /* space.png */; };
+		ED5EF4CD23F78D4200A39490 /* frame.png in Resources */ = {isa = PBXBuildFile; fileRef = ED5EF4C823F78D4200A39490 /* frame.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59E9BEA723FA380800F58819 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59E9BEA223FA380800F58819 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = SnapKit;
+		};
+		59E9BEA923FA380800F58819 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59E9BEA223FA380800F58819 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit Tests";
+		};
+		ED5EF49D23F78B1A00A39490 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED5EF47523F78AEF00A39490 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED5EF49723F78B1A00A39490;
+			remoteInfo = GestureCustomKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED5EF4A323F78B1A00A39490 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ED5EF49F23F78B1A00A39490 /* GestureCustomKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5EF4BD23F78C7900A39490 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				59E9BEAD23FA381400F58819 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5EF4C023F78CC000A39490 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				59E9BEAF23FA381800F58819 /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		59E9BEA223FA380800F58819 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = "../../SnapKit-develop/SnapKit.xcodeproj"; sourceTree = "<group>"; };
+		ED5EF47D23F78AEF00A39490 /* GestureKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED5EF48023F78AEF00A39490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED5EF48223F78AEF00A39490 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ED5EF48423F78AEF00A39490 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED5EF48723F78AEF00A39490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED5EF48923F78AF000A39490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED5EF48C23F78AF000A39490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED5EF48E23F78AF000A39490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED5EF49823F78B1A00A39490 /* GestureCustomKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GestureCustomKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED5EF49A23F78B1A00A39490 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		ED5EF49C23F78B1A00A39490 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED5EF4C423F78D4200A39490 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
+		ED5EF4C523F78D4200A39490 /* cap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cap.png; sourceTree = "<group>"; };
+		ED5EF4C623F78D4200A39490 /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		ED5EF4C723F78D4200A39490 /* space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space.png; sourceTree = "<group>"; };
+		ED5EF4C823F78D4200A39490 /* frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED5EF47A23F78AEF00A39490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E9BEAC23FA381400F58819 /* SnapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5EF49523F78B1A00A39490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E9BEAE23FA381800F58819 /* SnapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59E9BEA323FA380800F58819 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59E9BEA823FA380800F58819 /* SnapKit.framework */,
+				59E9BEAA23FA380800F58819 /* SnapKit Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59E9BEAB23FA381400F58819 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED5EF47423F78AEF00A39490 = {
+			isa = PBXGroup;
+			children = (
+				ED5EF47F23F78AEF00A39490 /* GestureKeyboard */,
+				ED5EF49923F78B1A00A39490 /* GestureCustomKeyboard */,
+				ED5EF47E23F78AEF00A39490 /* Products */,
+				59E9BEAB23FA381400F58819 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ED5EF47E23F78AEF00A39490 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED5EF47D23F78AEF00A39490 /* GestureKeyboard.app */,
+				ED5EF49823F78B1A00A39490 /* GestureCustomKeyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED5EF47F23F78AEF00A39490 /* GestureKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				ED5EF48023F78AEF00A39490 /* AppDelegate.swift */,
+				ED5EF48223F78AEF00A39490 /* SceneDelegate.swift */,
+				ED5EF48423F78AEF00A39490 /* ViewController.swift */,
+				ED5EF48623F78AEF00A39490 /* Main.storyboard */,
+				ED5EF48923F78AF000A39490 /* Assets.xcassets */,
+				ED5EF48B23F78AF000A39490 /* LaunchScreen.storyboard */,
+				ED5EF48E23F78AF000A39490 /* Info.plist */,
+			);
+			path = GestureKeyboard;
+			sourceTree = "<group>";
+		};
+		ED5EF49923F78B1A00A39490 /* GestureCustomKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				59E9BEA223FA380800F58819 /* SnapKit.xcodeproj */,
+				ED5EF4C123F78D0D00A39490 /* OtherFiles */,
+				ED5EF49A23F78B1A00A39490 /* KeyboardViewController.swift */,
+				ED5EF49C23F78B1A00A39490 /* Info.plist */,
+			);
+			path = GestureCustomKeyboard;
+			sourceTree = "<group>";
+		};
+		ED5EF4C123F78D0D00A39490 /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
+				ED5EF4C223F78D4200A39490 /* OtherFiles */,
+			);
+			path = OtherFiles;
+			sourceTree = "<group>";
+		};
+		ED5EF4C223F78D4200A39490 /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
+				ED5EF4C323F78D4200A39490 /* Images */,
+			);
+			name = OtherFiles;
+			sourceTree = "<group>";
+		};
+		ED5EF4C323F78D4200A39490 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ED5EF4C423F78D4200A39490 /* globe.png */,
+				ED5EF4C523F78D4200A39490 /* cap.png */,
+				ED5EF4C623F78D4200A39490 /* delete.png */,
+				ED5EF4C723F78D4200A39490 /* space.png */,
+				ED5EF4C823F78D4200A39490 /* frame.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED5EF47C23F78AEF00A39490 /* GestureKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED5EF49123F78AF000A39490 /* Build configuration list for PBXNativeTarget "GestureKeyboard" */;
+			buildPhases = (
+				ED5EF47923F78AEF00A39490 /* Sources */,
+				ED5EF47A23F78AEF00A39490 /* Frameworks */,
+				ED5EF47B23F78AEF00A39490 /* Resources */,
+				ED5EF4A323F78B1A00A39490 /* Embed App Extensions */,
+				ED5EF4BD23F78C7900A39490 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED5EF49E23F78B1A00A39490 /* PBXTargetDependency */,
+			);
+			name = GestureKeyboard;
+			productName = GestureKeyboard;
+			productReference = ED5EF47D23F78AEF00A39490 /* GestureKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED5EF49723F78B1A00A39490 /* GestureCustomKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED5EF4A023F78B1A00A39490 /* Build configuration list for PBXNativeTarget "GestureCustomKeyboard" */;
+			buildPhases = (
+				ED5EF49423F78B1A00A39490 /* Sources */,
+				ED5EF49523F78B1A00A39490 /* Frameworks */,
+				ED5EF49623F78B1A00A39490 /* Resources */,
+				ED5EF4C023F78CC000A39490 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GestureCustomKeyboard;
+			productName = GestureCustomKeyboard;
+			productReference = ED5EF49823F78B1A00A39490 /* GestureCustomKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED5EF47523F78AEF00A39490 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = GestureKeyboard;
+				TargetAttributes = {
+					ED5EF47C23F78AEF00A39490 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					ED5EF49723F78B1A00A39490 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = ED5EF47823F78AEF00A39490 /* Build configuration list for PBXProject "GestureKeyboard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED5EF47423F78AEF00A39490;
+			productRefGroup = ED5EF47E23F78AEF00A39490 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 59E9BEA323FA380800F58819 /* Products */;
+					ProjectRef = 59E9BEA223FA380800F58819 /* SnapKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				ED5EF47C23F78AEF00A39490 /* GestureKeyboard */,
+				ED5EF49723F78B1A00A39490 /* GestureCustomKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		59E9BEA823FA380800F58819 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 59E9BEA723FA380800F58819 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59E9BEAA23FA380800F58819 /* SnapKit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit Tests.xctest";
+			remoteRef = 59E9BEA923FA380800F58819 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED5EF47B23F78AEF00A39490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED5EF48D23F78AF000A39490 /* LaunchScreen.storyboard in Resources */,
+				ED5EF48A23F78AF000A39490 /* Assets.xcassets in Resources */,
+				ED5EF48823F78AEF00A39490 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5EF49623F78B1A00A39490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED5EF4CD23F78D4200A39490 /* frame.png in Resources */,
+				ED5EF4C923F78D4200A39490 /* globe.png in Resources */,
+				ED5EF4CA23F78D4200A39490 /* cap.png in Resources */,
+				ED5EF4CB23F78D4200A39490 /* delete.png in Resources */,
+				ED5EF4CC23F78D4200A39490 /* space.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED5EF47923F78AEF00A39490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED5EF48523F78AEF00A39490 /* ViewController.swift in Sources */,
+				ED5EF48123F78AEF00A39490 /* AppDelegate.swift in Sources */,
+				ED5EF48323F78AEF00A39490 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED5EF49423F78B1A00A39490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED5EF49B23F78B1A00A39490 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED5EF49E23F78B1A00A39490 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED5EF49723F78B1A00A39490 /* GestureCustomKeyboard */;
+			targetProxy = ED5EF49D23F78B1A00A39490 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED5EF48623F78AEF00A39490 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED5EF48723F78AEF00A39490 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED5EF48B23F78AF000A39490 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED5EF48C23F78AF000A39490 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED5EF48F23F78AF000A39490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ED5EF49023F78AF000A39490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED5EF49223F78AF000A39490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QA4DTJCC87;
+				INFOPLIST_FILE = GestureKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.horine.GestureKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED5EF49323F78AF000A39490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QA4DTJCC87;
+				INFOPLIST_FILE = GestureKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.horine.GestureKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ED5EF4A123F78B1A00A39490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QA4DTJCC87;
+				INFOPLIST_FILE = GestureCustomKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.horine.GestureKeyboard.GestureCustomKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED5EF4A223F78B1A00A39490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QA4DTJCC87;
+				INFOPLIST_FILE = GestureCustomKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.horine.GestureKeyboard.GestureCustomKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED5EF47823F78AEF00A39490 /* Build configuration list for PBXProject "GestureKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED5EF48F23F78AF000A39490 /* Debug */,
+				ED5EF49023F78AF000A39490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED5EF49123F78AF000A39490 /* Build configuration list for PBXNativeTarget "GestureKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED5EF49223F78AF000A39490 /* Debug */,
+				ED5EF49323F78AF000A39490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED5EF4A023F78B1A00A39490 /* Build configuration list for PBXNativeTarget "GestureCustomKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED5EF4A123F78B1A00A39490 /* Debug */,
+				ED5EF4A223F78B1A00A39490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED5EF47523F78AEF00A39490 /* Project object */;
+}
