@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183D7AF524088D6300545E8D /* space.png in Resources */ = {isa = PBXBuildFile; fileRef = 183D7AF024088D6300545E8D /* space.png */; };
+		183D7AF624088D6300545E8D /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 183D7AF124088D6300545E8D /* globe.png */; };
+		183D7AF724088D6300545E8D /* cap.png in Resources */ = {isa = PBXBuildFile; fileRef = 183D7AF224088D6300545E8D /* cap.png */; };
+		183D7AF824088D6300545E8D /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 183D7AF324088D6300545E8D /* delete.png */; };
+		183D7AF924088D6300545E8D /* frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 183D7AF424088D6300545E8D /* frame.png */; };
+		183D7B112408936D00545E8D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183D7B102408936D00545E8D /* SnapKit.framework */; };
+		183D7B122408936D00545E8D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 183D7B102408936D00545E8D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		183D7B152408938000545E8D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183D7B142408938000545E8D /* SnapKit.framework */; };
+		183D7B162408938000545E8D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 183D7B142408938000545E8D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2E21455223D25E71006E7D23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21455123D25E71006E7D23 /* AppDelegate.swift */; };
 		2E21455423D25E71006E7D23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21455323D25E71006E7D23 /* SceneDelegate.swift */; };
 		2E21455623D25E71006E7D23 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21455523D25E71006E7D23 /* FirstViewController.swift */; };
@@ -47,6 +56,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		183D7B132408936D00545E8D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				183D7B122408936D00545E8D /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183D7B172408938000545E8D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				183D7B162408938000545E8D /* SnapKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2E21459523D25E98006E7D23 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,6 +92,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		183D7AF024088D6300545E8D /* space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space.png; sourceTree = "<group>"; };
+		183D7AF124088D6300545E8D /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
+		183D7AF224088D6300545E8D /* cap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cap.png; sourceTree = "<group>"; };
+		183D7AF324088D6300545E8D /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		183D7AF424088D6300545E8D /* frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame.png; sourceTree = "<group>"; };
+		183D7B0C24088EBF00545E8D /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = ../../../../Downloads/SnapKit.xcodeproj; sourceTree = "<group>"; };
+		183D7B102408936D00545E8D /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		183D7B142408938000545E8D /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E21454E23D25E71006E7D23 /* GestureRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E21455123D25E71006E7D23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E21455323D25E71006E7D23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183D7B152408938000545E8D /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,12 +149,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183D7B112408936D00545E8D /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183D7AEF24088D6300545E8D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				183D7AF024088D6300545E8D /* space.png */,
+				183D7AF124088D6300545E8D /* globe.png */,
+				183D7AF224088D6300545E8D /* cap.png */,
+				183D7AF324088D6300545E8D /* delete.png */,
+				183D7AF424088D6300545E8D /* frame.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		183D7B0D24088EBF00545E8D /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		183D7B0F2408936D00545E8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				183D7B142408938000545E8D /* SnapKit.framework */,
+				183D7B102408936D00545E8D /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2E21454523D25E71006E7D23 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +191,7 @@
 				2E21457723D25E72006E7D23 /* GestureRecognitionUITests */,
 				2E21458B23D25E98006E7D23 /* Gesture Keyboard */,
 				2E21454F23D25E71006E7D23 /* Products */,
+				183D7B0F2408936D00545E8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,8 +243,10 @@
 		2E21458B23D25E98006E7D23 /* Gesture Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				2E21458C23D25E98006E7D23 /* KeyboardViewController.swift */,
+				183D7B0C24088EBF00545E8D /* SnapKit.xcodeproj */,
 				2E21458E23D25E98006E7D23 /* Info.plist */,
+				183D7AEF24088D6300545E8D /* Images */,
+				2E21458C23D25E98006E7D23 /* KeyboardViewController.swift */,
 			);
 			path = "Gesture Keyboard";
 			sourceTree = "<group>";
@@ -192,6 +262,7 @@
 				2E21454B23D25E71006E7D23 /* Frameworks */,
 				2E21454C23D25E71006E7D23 /* Resources */,
 				2E21459523D25E98006E7D23 /* Embed App Extensions */,
+				183D7B172408938000545E8D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,6 +317,7 @@
 				2E21458623D25E98006E7D23 /* Sources */,
 				2E21458723D25E98006E7D23 /* Frameworks */,
 				2E21458823D25E98006E7D23 /* Resources */,
+				183D7B132408936D00545E8D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,6 +365,12 @@
 			mainGroup = 2E21454523D25E71006E7D23;
 			productRefGroup = 2E21454F23D25E71006E7D23 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 183D7B0D24088EBF00545E8D /* Products */;
+					ProjectRef = 183D7B0C24088EBF00545E8D /* SnapKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2E21454D23D25E71006E7D23 /* GestureRecognition */,
@@ -333,6 +411,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183D7AF824088D6300545E8D /* delete.png in Resources */,
+				183D7AF724088D6300545E8D /* cap.png in Resources */,
+				183D7AF524088D6300545E8D /* space.png in Resources */,
+				183D7AF924088D6300545E8D /* frame.png in Resources */,
+				183D7AF624088D6300545E8D /* globe.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
