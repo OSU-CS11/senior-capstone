@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GestureRecognition.xcodeproj">
+      location = "group:../../../../Downloads/SnapKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../../../Downloads/SnapKit-5.0.1/SnapKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
