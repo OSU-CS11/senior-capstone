@@ -16,6 +16,12 @@
 		183D7B122408936D00545E8D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 183D7B102408936D00545E8D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		183D7B152408938000545E8D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183D7B142408938000545E8D /* SnapKit.framework */; };
 		183D7B162408938000545E8D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 183D7B142408938000545E8D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18C233B4241E02070096F791 /* GestureAlphabetProcessor.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 18C233B3241E02060096F791 /* GestureAlphabetProcessor.mlmodel */; };
+		18C233B5241E02070096F791 /* GestureAlphabetProcessor.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 18C233B3241E02060096F791 /* GestureAlphabetProcessor.mlmodel */; };
+		18C233B7241E0D8E0096F791 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C233B6241E0D8D0096F791 /* CoreMotion.framework */; };
+		18C233B8241E0D8E0096F791 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C233B6241E0D8D0096F791 /* CoreMotion.framework */; };
+		18C233BA241E0D930096F791 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C233B9241E0D930096F791 /* CoreML.framework */; };
+		18C233BB241E0D930096F791 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C233B9241E0D930096F791 /* CoreML.framework */; };
 		2E21455223D25E71006E7D23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21455123D25E71006E7D23 /* AppDelegate.swift */; };
 		2E21455423D25E71006E7D23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21455323D25E71006E7D23 /* SceneDelegate.swift */; };
 		2E21455623D25E71006E7D23 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21455523D25E71006E7D23 /* FirstViewController.swift */; };
@@ -28,10 +34,23 @@
 		2E21457923D25E72006E7D23 /* GestureRecognitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21457823D25E72006E7D23 /* GestureRecognitionUITests.swift */; };
 		2E21458D23D25E98006E7D23 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E21458C23D25E98006E7D23 /* KeyboardViewController.swift */; };
 		2E21459123D25E98006E7D23 /* Gesture Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2E21458A23D25E98006E7D23 /* Gesture Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2E21459723D25EC9006E7D23 /* grt in Resources */ = {isa = PBXBuildFile; fileRef = 2E21459623D25EC9006E7D23 /* grt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		18C233AF241DF08B0096F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18C233AA241DF08B0096F791 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
+			remoteInfo = SnapKit;
+		};
+		18C233B1241DF08B0096F791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18C233AA241DF08B0096F791 /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
+			remoteInfo = "SnapKit Tests";
+		};
 		2E21456A23D25E72006E7D23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2E21454623D25E71006E7D23 /* Project object */;
@@ -97,9 +116,12 @@
 		183D7AF224088D6300545E8D /* cap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cap.png; sourceTree = "<group>"; };
 		183D7AF324088D6300545E8D /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		183D7AF424088D6300545E8D /* frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame.png; sourceTree = "<group>"; };
-		183D7B0C24088EBF00545E8D /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = ../../../../Downloads/SnapKit.xcodeproj; sourceTree = "<group>"; };
 		183D7B102408936D00545E8D /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		183D7B142408938000545E8D /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C233AA241DF08B0096F791 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = SnapKit/SnapKit.xcodeproj; sourceTree = SOURCE_ROOT; };
+		18C233B3241E02060096F791 /* GestureAlphabetProcessor.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GestureAlphabetProcessor.mlmodel; sourceTree = "<group>"; };
+		18C233B6241E0D8D0096F791 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		18C233B9241E0D930096F791 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		2E21454E23D25E71006E7D23 /* GestureRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E21455123D25E71006E7D23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E21455323D25E71006E7D23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +141,6 @@
 		2E21458A23D25E98006E7D23 /* Gesture Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gesture Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E21458C23D25E98006E7D23 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		2E21458E23D25E98006E7D23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E21459623D25EC9006E7D23 /* grt */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grt; path = ../grt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				183D7B152408938000545E8D /* SnapKit.framework in Frameworks */,
+				18C233B7241E0D8E0096F791 /* CoreMotion.framework in Frameworks */,
+				18C233BA241E0D930096F791 /* CoreML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				183D7B112408936D00545E8D /* SnapKit.framework in Frameworks */,
+				18C233B8241E0D8E0096F791 /* CoreMotion.framework in Frameworks */,
+				18C233BB241E0D930096F791 /* CoreML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,24 +193,29 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		183D7B0D24088EBF00545E8D /* Products */ = {
-			isa = PBXGroup;
-			name = Products;
-			sourceTree = "<group>";
-		};
 		183D7B0F2408936D00545E8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18C233B9241E0D930096F791 /* CoreML.framework */,
+				18C233B6241E0D8D0096F791 /* CoreMotion.framework */,
 				183D7B142408938000545E8D /* SnapKit.framework */,
 				183D7B102408936D00545E8D /* SnapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		18C233AB241DF08B0096F791 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18C233B0241DF08B0096F791 /* SnapKit.framework */,
+				18C233B2241DF08B0096F791 /* SnapKit Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2E21454523D25E71006E7D23 = {
 			isa = PBXGroup;
 			children = (
-				2E21459623D25EC9006E7D23 /* grt */,
 				2E21455023D25E71006E7D23 /* GestureRecognition */,
 				2E21456C23D25E72006E7D23 /* GestureRecognitionTests */,
 				2E21457723D25E72006E7D23 /* GestureRecognitionUITests */,
@@ -243,10 +273,11 @@
 		2E21458B23D25E98006E7D23 /* Gesture Keyboard */ = {
 			isa = PBXGroup;
 			children = (
-				183D7B0C24088EBF00545E8D /* SnapKit.xcodeproj */,
+				18C233B3241E02060096F791 /* GestureAlphabetProcessor.mlmodel */,
 				2E21458E23D25E98006E7D23 /* Info.plist */,
-				183D7AEF24088D6300545E8D /* Images */,
 				2E21458C23D25E98006E7D23 /* KeyboardViewController.swift */,
+				18C233AA241DF08B0096F791 /* SnapKit.xcodeproj */,
+				183D7AEF24088D6300545E8D /* Images */,
 			);
 			path = "Gesture Keyboard";
 			sourceTree = "<group>";
@@ -367,8 +398,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 183D7B0D24088EBF00545E8D /* Products */;
-					ProjectRef = 183D7B0C24088EBF00545E8D /* SnapKit.xcodeproj */;
+					ProductGroup = 18C233AB241DF08B0096F791 /* Products */;
+					ProjectRef = 18C233AA241DF08B0096F791 /* SnapKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -381,12 +412,28 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		18C233B0241DF08B0096F791 /* SnapKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SnapKit.framework;
+			remoteRef = 18C233AF241DF08B0096F791 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		18C233B2241DF08B0096F791 /* SnapKit Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SnapKit Tests.xctest";
+			remoteRef = 18C233B1241DF08B0096F791 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2E21454C23D25E71006E7D23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E21459723D25EC9006E7D23 /* grt in Resources */,
 				2E21456323D25E72006E7D23 /* LaunchScreen.storyboard in Resources */,
 				2E21456023D25E72006E7D23 /* Assets.xcassets in Resources */,
 				2E21455B23D25E71006E7D23 /* Main.storyboard in Resources */,
@@ -426,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C233B4241E02070096F791 /* GestureAlphabetProcessor.mlmodel in Sources */,
 				2E21455823D25E71006E7D23 /* SecondViewController.swift in Sources */,
 				2E21455E23D25E71006E7D23 /* GestureRecognition.xcdatamodeld in Sources */,
 				2E21455623D25E71006E7D23 /* FirstViewController.swift in Sources */,
@@ -454,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C233B5241E02070096F791 /* GestureAlphabetProcessor.mlmodel in Sources */,
 				2E21458D23D25E98006E7D23 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +669,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QA4DTJCC87;
 				INFOPLIST_FILE = GestureRecognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -639,6 +689,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QA4DTJCC87;
 				INFOPLIST_FILE = GestureRecognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

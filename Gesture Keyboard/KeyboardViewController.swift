@@ -8,14 +8,38 @@
 
 import UIKit
 import SnapKit
+import CoreML
+import CoreMotion
 
 class KeyboardViewController: UIInputViewController {
 
     var caseType: String = ""
     let keyboardViewHeight = 280
     
+    // MARK:- Properties
+    
+    private var gestureAI = GestureAlphabetProcessor()
+    private let queue = OperationQueue.init()
+    private let motionManager = CMMotionManager()
+    private lazy var timer: Timer = {
+        Timer.scheduledTimer(timeInterval: 1.0, target: self,
+                             selector: #selector(self.updateTimer(tm:)), userInfo: nil, repeats: true)
+    }()
+    let userDefaults = UserDefaults.standard
+    
+    private let timeMax: Int = 4
+    private var cntTimer: Int = 0
+    private let inputDim: Int = 3
+    private let lengthMax: Int = 30
+    private var sequenceTargetX: [Double] = []
+    private var sequenceTargetY: [Double] = []
+    private var sequenceTargetZ: [Double] = []
+    
+    // MARK:- Outlets
     let SCWidth = UIScreen.main.bounds.width
     @IBOutlet var nextKeyboardButton: UIButton!
+    
+    var pickerData: [String] = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     
     override func updateViewConstraints() {
         super.updateViewConstraints()
@@ -23,6 +47,7 @@ class KeyboardViewController: UIInputViewController {
         // Add custom view sizing constraints here
     }
     
+    // MARK:- UIViewControllers
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +56,7 @@ class KeyboardViewController: UIInputViewController {
         
         self.view.backgroundColor = .white
         
-        caseType = "ABC"
+        caseType = "abc"
         
         addNextKeyboardButton()
         keyboardView()
@@ -146,11 +171,15 @@ class KeyboardViewController: UIInputViewController {
         }
         let buttonTitles: Array<Any>
         if caseType == "abc" {
-            buttonTitles = ["a", "b", "c"]
+            //buttonTitles = ["a-z", "a-z", "0-9"]
+            buttonTitles = ["a-z"]
         }else{
-            buttonTitles = ["A", "B", "C"]
+            //buttonTitles = ["A-Z", "A-Z", "0-9"]
+            buttonTitles = ["A-Z"]
         }
-        let keyFirstWIth = SCWidth / 3
+        //
+        //let keyFirstWIth = SCWidth / 3
+        let keyFirstWIth = SCWidth
         for i in 0..<buttonTitles.count {
             let keyX: CGFloat = CGFloat(i) * keyFirstWIth
             let keyButton:UIButton = UIButton(frame: CGRect(x: keyX, y: 0, width: keyFirstWIth, height: CGFloat(keyboardViewHeight)-120 ))
@@ -159,15 +188,59 @@ class KeyboardViewController: UIInputViewController {
             keyViewFirst.addSubview(keyButton)
             keyButton.setTitleColor(.black, for: .normal)
             keyButton.setTitle((buttonTitles[i] as! String), for: .normal)
-            keyButton.addTarget(self, action: #selector(firstRowButtonTouch), for: .touchUpInside)
+            keyButton.addTarget(self, action: #selector(firstRowButtonTouchUp), for: .touchUpInside)
+            keyButton.addTarget(self, action: #selector(firstRowButtonTouchDown), for: .touchDown)
         }
         
     }
     
-    @objc func firstRowButtonTouch(sender: UIButton) {
-        let title = sender.title(for: .normal)
+    @objc func firstRowButtonTouchUp(sender: UIButton) {
+        motionManager.stopAccelerometerUpdates()
+
+        timer.invalidate()
+        cntTimer = 0
+        
+        let cnt = self.sequenceTargetX.count
+        if cnt >= inputDim {
+            cntTimer = 0
+            return
+        }
+        
+        // Pay attention to input dimension for RNN
+        for _ in cnt..<lengthMax*inputDim {
+            self.sequenceTargetX.append(0.0)
+            self.sequenceTargetY.append(0.0)
+            self.sequenceTargetZ.append(0.0)
+        }
+
+        let output = predict(self.sequenceTargetX,self.sequenceTargetY,self.sequenceTargetZ)
+        
+        //let title = sender.title(for: .normal)
         let proxy = textDocumentProxy as UITextDocumentProxy
-        proxy.insertText(title!)
+        proxy.insertText(output.label)
+        
+        
+    }
+    
+    @objc func firstRowButtonTouchDown(sender: UIButton) {
+        
+        self.sequenceTargetX = []
+        self.sequenceTargetY = []
+        self.sequenceTargetZ = []
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimer(tm:)), userInfo: nil, repeats: true)
+        timer.fire()
+        
+        motionManager.startAccelerometerUpdates(to: queue, withHandler: {
+            (accelerometerData, error) in
+            if let e = error {
+                fatalError(e.localizedDescription)
+            }
+            guard let data = accelerometerData else { return }
+            self.sequenceTargetX.append(data.acceleration.x)
+            self.sequenceTargetY.append(data.acceleration.y)
+            self.sequenceTargetZ.append(data.acceleration.z)
+        })
     }
     
     @objc func caseButtonTouch(sender: UIButton) {
@@ -219,6 +292,50 @@ class KeyboardViewController: UIInputViewController {
             textColor = UIColor.black
         }
         self.nextKeyboardButton.setTitleColor(textColor, for: [])
+    }
+    
+    
+    // MARK:- Utils
+    
+    @objc private func updateTimer(tm: Timer) {
+        if cntTimer >= timeMax {
+//TODO: change button color
+            timer.invalidate()
+            cntTimer = 0
+            return
+        }
+        cntTimer += 1
+    }
+
+    /// Convert double array type into MLMultiArray
+    ///
+    /// - Parameters:
+    /// - arr: double array
+    /// - Returns: MLMultiArray
+    private func toMLMultiArray(_ arr: [Double]) -> MLMultiArray {
+        guard let sequence = try? MLMultiArray(shape:[30], dataType:MLMultiArrayDataType.double) else {
+            fatalError("Unexpected runtime error. MLMultiArray")
+        }
+        let size = Int(truncating: sequence.shape[0])
+        for i in 0..<size {
+            sequence[i] = NSNumber(floatLiteral: arr[i])
+        }
+        return sequence
+    }
+    
+    /// Predict class label
+    ///
+    /// - Parameters:
+    /// - arr: Sequence
+    /// - Returns: Likelihood
+    private func predict(_ arrX: [Double], _ arrY: [Double], _ arrZ: [Double]) -> GestureAlphabetProcessorOutput {
+        guard let output = try? gestureAI.prediction(input:
+            GestureAlphabetProcessorInput(accelerometerAccelerationX_G_: toMLMultiArray(arrX),
+                                          accelerometerAccelerationY_G_: toMLMultiArray(arrY),
+                                          accelerometerAccelerationZ_G_: toMLMultiArray(arrZ)), options: MLPredictionOptions()) else {
+                fatalError("Unexpected runtime error.")
+        }
+        return output
     }
 
 }
