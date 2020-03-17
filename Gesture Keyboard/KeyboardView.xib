@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="Gesture_Keyboard" customModuleProvider="target">
+            <connections>
+                <outlet property="capsButton" destination="Oxv-C7-y6C" id="YJo-bP-swa"/>
+                <outlet property="delButton" destination="Syy-YY-cTl" id="XgA-bF-PP5"/>
+                <outlet property="enterButton" destination="zyg-uq-biq" id="dR1-KQ-nIN"/>
+                <outlet property="keyboardView" destination="iN0-l3-epB" id="EyK-bc-azR"/>
+                <outlet property="mainButton" destination="vzh-05-oV9" id="JWp-ql-3dJ"/>
+                <outlet property="nextKeyboardButton" destination="CWP-UO-Elh" id="dLN-6a-hy4"/>
+                <outlet property="spaceBar" destination="6OT-qK-yok" id="PLV-4l-tBz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vzh-05-oV9">
+                    <rect key="frame" x="20" y="85" width="374" height="146"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="A-Z">
+                                <attributes>
+                                    <font key="NSFont" size="64" name="STSong"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="firstRowButtonTouchDownWithSender:" destination="-1" eventType="touchDown" id="Cpa-ZH-8Jn"/>
+                        <action selector="mainTouchUp:" destination="-1" eventType="touchUpInside" id="NJc-Po-QIa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OT-qK-yok">
+                    <rect key="frame" x="74" y="236" width="266" height="34"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Space!!">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="spaceButtonTouch:" destination="-1" eventType="touchUpInside" id="ORg-iX-eU9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWP-UO-Elh">
+                    <rect key="frame" x="20" y="236" width="50" height="34"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="15l-g7-M7v"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="globe" catalog="system">
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
+                    </state>
+                    <connections>
+                        <action selector="chgButtonTouch:" destination="-1" eventType="touchUpInside" id="Ijq-Pr-2dt"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxv-C7-y6C">
+                    <rect key="frame" x="20" y="44" width="37" height="39"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="37" id="rYU-IP-iDp"/>
+                        <constraint firstAttribute="height" constant="39" id="xt6-JR-hFF"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="capslock" catalog="system"/>
+                    <connections>
+                        <action selector="caseButtonTouch:" destination="-1" eventType="touchUpInside" id="I2n-aI-p3V"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syy-YY-cTl">
+                    <rect key="frame" x="353" y="44" width="41" height="39"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="w2P-Rb-Ean"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="delete.left" catalog="system"/>
+                    <connections>
+                        <action selector="delButtonTouch:" destination="-1" eventType="touchUpInside" id="kLz-DD-nCh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyg-uq-biq">
+                    <rect key="frame" x="344" y="236" width="50" height="34"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Enter">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zyg-uq-biq" firstAttribute="leading" secondItem="6OT-qK-yok" secondAttribute="trailing" constant="4" id="1Du-wO-H6V"/>
+                <constraint firstItem="vzh-05-oV9" firstAttribute="top" secondItem="Oxv-C7-y6C" secondAttribute="bottom" constant="2" id="3FX-sa-reS"/>
+                <constraint firstItem="Syy-YY-cTl" firstAttribute="trailing" secondItem="vzh-05-oV9" secondAttribute="trailing" id="54o-9i-Clo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CWP-UO-Elh" secondAttribute="bottom" constant="30" id="6PJ-a9-8fc"/>
+                <constraint firstItem="vzh-05-oV9" firstAttribute="leading" secondItem="CWP-UO-Elh" secondAttribute="leading" id="AFp-WK-CzR"/>
+                <constraint firstItem="vzh-05-oV9" firstAttribute="centerX" secondItem="6OT-qK-yok" secondAttribute="centerX" id="FCI-n6-ZR6"/>
+                <constraint firstItem="Syy-YY-cTl" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="Ilp-CD-w5L"/>
+                <constraint firstItem="CWP-UO-Elh" firstAttribute="top" secondItem="6OT-qK-yok" secondAttribute="top" id="OQi-02-nHb"/>
+                <constraint firstItem="Oxv-C7-y6C" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QZH-S2-BUI"/>
+                <constraint firstItem="CWP-UO-Elh" firstAttribute="baseline" secondItem="zyg-uq-biq" secondAttribute="firstBaseline" id="SGz-ji-bqP"/>
+                <constraint firstItem="6OT-qK-yok" firstAttribute="bottom" secondItem="zyg-uq-biq" secondAttribute="bottom" id="U8c-aL-qGd"/>
+                <constraint firstItem="6OT-qK-yok" firstAttribute="leading" secondItem="CWP-UO-Elh" secondAttribute="trailing" constant="4" id="Uf5-kX-JqB"/>
+                <constraint firstItem="CWP-UO-Elh" firstAttribute="top" secondItem="vzh-05-oV9" secondAttribute="bottom" constant="5" id="Ulj-rB-YKx"/>
+                <constraint firstItem="vzh-05-oV9" firstAttribute="trailing" secondItem="zyg-uq-biq" secondAttribute="trailing" id="Xhq-Rp-QNk"/>
+                <constraint firstItem="Oxv-C7-y6C" firstAttribute="leading" secondItem="vzh-05-oV9" secondAttribute="leading" id="ZsN-KP-5iB"/>
+                <constraint firstItem="Oxv-C7-y6C" firstAttribute="top" secondItem="Syy-YY-cTl" secondAttribute="top" id="a8I-7C-ENc"/>
+                <constraint firstItem="Oxv-C7-y6C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="rBD-qZ-dqh"/>
+                <constraint firstItem="6OT-qK-yok" firstAttribute="top" secondItem="zyg-uq-biq" secondAttribute="top" id="riu-dn-3vM"/>
+                <constraint firstItem="Oxv-C7-y6C" firstAttribute="bottom" secondItem="Syy-YY-cTl" secondAttribute="bottom" id="s6E-2N-U1z"/>
+                <constraint firstItem="CWP-UO-Elh" firstAttribute="bottom" secondItem="6OT-qK-yok" secondAttribute="bottom" id="xZf-pb-MPY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="capslock" catalog="system" width="64" height="60"/>
+        <image name="delete.left" catalog="system" width="64" height="52"/>
+        <image name="globe" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
