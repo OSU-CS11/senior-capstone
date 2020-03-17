@@ -1,16 +1,19 @@
 # Senior-Capstone-CS11
-A universal user input front-end for mobile devices:
+A Gesture Recognition Keyboard for iOS. Our app provides a system keyboard that allows the user to use a series of motion gestures to type out text in standard input fields.
 
-Filling out forms on personal devices is a common and tedious task. Some users are comfortable with the devices keyboard and some avoid it at all cost. Sometimes the scale of the information that needs to be input makes keyboard entry overwhelming. Modern devices paired with off-the-shelf technologies are able to acquire information in a number of different ways. But no app or module exhaustively bundles all of these methods into a single module that can then be used by other app developers.
+## This project includes:
+  - Building a machine learning model to test user gestures against (We used Apple's CreateML and CoreML tools)
+  - Creating training data and using this to generate a vaible model for matching
+  - Making a keyboard interface for users to interact with and tell us when we should be listentening for gestures
+  - Creating a user trainer for use by the user to learn our gesture set
 
-This project involves building a module that will generate text from any of the following methods:
-
-+ from the devices keyboard
-+ using optical character recognition by taking a picture of text written against a white background
-+ converting handwriting to characters on a writing field contained on the devices screen using the finger as a stylus
-+ using voice to text using the devices microphone
-+ using a bar-code reader that accesses the devices camera
-+ using morse-code in an audio file or encoded in a picture of bars and dots on a white background
-…. possibly others
-
-A single module bundles these independent input methods into one. The module publishes an API for an app which will call the module when a user encounters a text field in the calling app. It generates text from one of the methods above, as chosen by the user, and then communicates the resulting text back to the calling app’s text field. The successful project will place this module on some online marketplace for other app builders to use.
+### To build this project:
+  - download the git repository, XCode 11.3, and MacOS 10.15 (if you want to build your own CoreML model)
+  - run `git submodule init` and `git submodule update` to pull Snapkit into your repository
+  - open the main project file (`GestureRecognition.xcodeproj`) in XCode
+  - Build snapkit for your local mac (see img below)
+    ![image](https://github.com/OSU-CS11/documents/blob/master/Screen%20Shot%202020-03-16%20at%2011.42.20%20PM.png?raw=true)
+  - After this builds, build the project for your target device.
+    ![image](https://github.com/OSU-CS11/documents/blob/master/appBuild_phone.png?raw=true)
+### Using the App
+  - Instructions coming soon!
