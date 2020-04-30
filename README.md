@@ -10,6 +10,7 @@ A Gesture Recognition Keyboard for iOS. Our app provides a system keyboard that 
 ### To build this project:
   - download the git repository, XCode 11.3, and MacOS 10.15 (if you want to build your own CoreML model)
   - run `git submodule init` and `git submodule update` to pull Snapkit into your repository
+#### **This only works if you have an SSH key registered with Github. Info here: https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
   - open the main project file (`GestureRecognition.xcodeproj`) in XCode
   - Build snapkit for your local mac (see img below)
     ![image](https://github.com/OSU-CS11/documents/blob/master/Screen%20Shot%202020-03-16%20at%2011.42.20%20PM.png?raw=true)
