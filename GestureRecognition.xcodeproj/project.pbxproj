@@ -36,16 +36,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		18C233AF241DF08B0096F791 /* PBXContainerItemProxy */ = {
+		184526A7245C84B8009BF8EA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 18C233AA241DF08B0096F791 /* SnapKit.xcodeproj */;
+			containerPortal = 184526A2245C84B8009BF8EA /* SnapKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EEBCC9D819CC627D0083B827;
 			remoteInfo = SnapKit;
 		};
-		18C233B1241DF08B0096F791 /* PBXContainerItemProxy */ = {
+		184526A9245C84B8009BF8EA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 18C233AA241DF08B0096F791 /* SnapKit.xcodeproj */;
+			containerPortal = 184526A2245C84B8009BF8EA /* SnapKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = EEBCC9E219CC627E0083B827;
 			remoteInfo = "SnapKit Tests";
@@ -117,7 +117,7 @@
 		183D7AF424088D6300545E8D /* frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame.png; sourceTree = "<group>"; };
 		183D7B102408936D00545E8D /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		183D7B142408938000545E8D /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18C233AA241DF08B0096F791 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = SnapKit/SnapKit.xcodeproj; sourceTree = SOURCE_ROOT; };
+		184526A2245C84B8009BF8EA /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = "../../../senior-capstone/SnapKit/SnapKit.xcodeproj"; sourceTree = "<group>"; };
 		18C233B3241E02060096F791 /* GestureAlphabetProcessor.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GestureAlphabetProcessor.mlmodel; sourceTree = "<group>"; };
 		18C233B6241E0D8D0096F791 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		18C233B9241E0D930096F791 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
@@ -202,11 +202,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		18C233AB241DF08B0096F791 /* Products */ = {
+		184526A3245C84B8009BF8EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18C233B0241DF08B0096F791 /* SnapKit.framework */,
-				18C233B2241DF08B0096F791 /* SnapKit Tests.xctest */,
+				184526A8245C84B8009BF8EA /* SnapKit.framework */,
+				184526AA245C84B8009BF8EA /* SnapKit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 				18C233B3241E02060096F791 /* GestureAlphabetProcessor.mlmodel */,
 				2E21458E23D25E98006E7D23 /* Info.plist */,
 				2E21458C23D25E98006E7D23 /* KeyboardViewController.swift */,
-				18C233AA241DF08B0096F791 /* SnapKit.xcodeproj */,
+				184526A2245C84B8009BF8EA /* SnapKit.xcodeproj */,
 				183D7AEF24088D6300545E8D /* Images */,
 			);
 			path = "Gesture Keyboard";
@@ -395,8 +395,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 18C233AB241DF08B0096F791 /* Products */;
-					ProjectRef = 18C233AA241DF08B0096F791 /* SnapKit.xcodeproj */;
+					ProductGroup = 184526A3245C84B8009BF8EA /* Products */;
+					ProjectRef = 184526A2245C84B8009BF8EA /* SnapKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -410,18 +410,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		18C233B0241DF08B0096F791 /* SnapKit.framework */ = {
+		184526A8245C84B8009BF8EA /* SnapKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SnapKit.framework;
-			remoteRef = 18C233AF241DF08B0096F791 /* PBXContainerItemProxy */;
+			remoteRef = 184526A7245C84B8009BF8EA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		18C233B2241DF08B0096F791 /* SnapKit Tests.xctest */ = {
+		184526AA245C84B8009BF8EA /* SnapKit Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SnapKit Tests.xctest";
-			remoteRef = 18C233B1241DF08B0096F791 /* PBXContainerItemProxy */;
+			remoteRef = 184526A9245C84B8009BF8EA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
