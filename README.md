@@ -16,5 +16,3 @@ A Gesture Recognition Keyboard for iOS. Our app provides a system keyboard that 
     ![image](https://github.com/OSU-CS11/documents/blob/master/Screen%20Shot%202020-03-16%20at%2011.42.20%20PM.png?raw=true)
   - After this builds, build the project for your target device.
     ![image](https://github.com/OSU-CS11/documents/blob/master/appBuild_phone.png?raw=true)
-### Using the App
-  - Instructions coming soon!
