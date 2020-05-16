@@ -18,7 +18,9 @@ class KeyboardViewController: UIInputViewController {
     
     // MARK:- Properties
     
+    //ML model
     private var gestureAI = GestureAlphabetProcessor()
+    
     private let queue = OperationQueue.init()
     private let motionManager = CMMotionManager()
     private lazy var timer: Timer = {
@@ -54,8 +56,10 @@ class KeyboardViewController: UIInputViewController {
         let heightConstraint = NSLayoutConstraint(item: self.view as Any, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 0.0, constant: CGFloat(keyboardViewHeight))
         self.view.addConstraint(heightConstraint)
         
+        //set view background to white
         self.view.backgroundColor = .white
         
+        //set case type to lowercase
         caseType = "abc"
         
         addNextKeyboardButton()
@@ -63,6 +67,7 @@ class KeyboardViewController: UIInputViewController {
         
     }
     
+    //Allow user to change keyboards
     func addNextKeyboardButton() {
         // Perform custom UI setup here
         self.nextKeyboardButton = UIButton(type: .system)
@@ -79,7 +84,7 @@ class KeyboardViewController: UIInputViewController {
         self.nextKeyboardButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     
-    
+    //Snapkit Auto-layout with keyboard button constraints
     func keyboardView() {
         
         let topView = UIView()
@@ -194,9 +199,11 @@ class KeyboardViewController: UIInputViewController {
         
     }
     
+    //Determine when user completes gesture and return character predicted by ML model
     @objc func firstRowButtonTouchUp(sender: UIButton) {
         motionManager.stopAccelerometerUpdates()
-
+        
+        //Timer stops when user releases keyboard button
         timer.invalidate()
         cntTimer = 0
         
@@ -213,8 +220,10 @@ class KeyboardViewController: UIInputViewController {
             self.sequenceTargetZ.append(0.0)
         }
 
+        //Pass accelerometer data to ML model 
         let output = predict(self.sequenceTargetX,self.sequenceTargetY,self.sequenceTargetZ)
         
+        //Output ML model predicted gesture character
         //let title = sender.title(for: .normal)
         let proxy = textDocumentProxy as UITextDocumentProxy
         proxy.insertText(output.label)
@@ -222,12 +231,14 @@ class KeyboardViewController: UIInputViewController {
         
     }
     
+    //Determine when user begins gesturing to start timer and collect their accelerometer data
     @objc func firstRowButtonTouchDown(sender: UIButton) {
         
         self.sequenceTargetX = []
         self.sequenceTargetY = []
         self.sequenceTargetZ = []
         
+        //timer determines length of acceleration data samples
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimer(tm:)), userInfo: nil, repeats: true)
         timer.fire()
         
@@ -236,6 +247,7 @@ class KeyboardViewController: UIInputViewController {
             if let e = error {
                 fatalError(e.localizedDescription)
             }
+            //Data consists of 3 axis accelerations provided by iOS device
             guard let data = accelerometerData else { return }
             self.sequenceTargetX.append(data.acceleration.x)
             self.sequenceTargetY.append(data.acceleration.y)
@@ -323,11 +335,11 @@ class KeyboardViewController: UIInputViewController {
         return sequence
     }
     
-    /// Predict class label
+    /// Predict class label with ML model
     ///
-    /// - Parameters:
+    /// - Parameters:3 axis acceleration sequences of 26 gesture classes
     /// - arr: Sequence
-    /// - Returns: Likelihood
+    /// - Returns: Likelihood of gesture class/character
     private func predict(_ arrX: [Double], _ arrY: [Double], _ arrZ: [Double]) -> GestureAlphabetProcessorOutput {
         guard let output = try? gestureAI.prediction(input:
             GestureAlphabetProcessorInput(accelerometerAccelerationX_G_: toMLMultiArray(arrX),
